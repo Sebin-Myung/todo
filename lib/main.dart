@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/screen/monthly_screen.dart';
 import 'package:todo/style/color_styles.dart';
 import 'package:todo/widget/bottom_bar.dart';
 
@@ -22,9 +23,7 @@ class _MyAppState extends State<MyApp> {
               body: TabBarView(
                 physics: const NeverScrollableScrollPhysics(),
                 children: <Widget>[
-                  Container(
-                    child: const Center(child: Text('월간')),
-                  ),
+                  MonthlyScreen(),
                   Container(
                     child: const Center(child: Text('주간')),
                   ),
