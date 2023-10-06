@@ -1,11 +1,11 @@
 import 'package:intl/intl.dart';
 
 class Todo {
-  late final String title;
-  late final bool isComplete;
-  late final bool isDuration;
-  late final DateTime startDate;
-  late final DateTime? endDate;
+  String title;
+  bool isComplete;
+  bool isDuration;
+  DateTime startDate;
+  DateTime? endDate;
 
   Todo.fromMap(Map<String, dynamic> map)
       : title = map['title'],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todo/model/model_todo.dart';
 
+import '../widget/todo_item.dart';
+
 class MonthlyScreen extends StatefulWidget {
   _MonthlyScreenState createState() => _MonthlyScreenState();
 }
@@ -15,7 +17,7 @@ class _MonthlyScreenState extends State<MonthlyScreen> {
     }),
     Todo.fromMap({
       'title': '투두 앱 만들기',
-      'isComplete': false,
+      'isComplete': true,
       'isDuration': true,
       'startDate': DateTime(2023, 10, 6),
       'endDate': DateTime(2023, 10, 10)
@@ -30,7 +32,10 @@ class _MonthlyScreenState extends State<MonthlyScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Center(child: Text('monthly')),
+      child: Center(
+          child: TodoItem(
+        todo: todos[0],
+      )),
     );
   }
 }
