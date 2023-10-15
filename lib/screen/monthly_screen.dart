@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo/model/model_todo.dart';
-
-import '../widget/todo_item.dart';
+import 'package:todo/widget/todo_item_list.dart';
 
 class MonthlyScreen extends StatefulWidget {
   _MonthlyScreenState createState() => _MonthlyScreenState();
@@ -33,8 +32,8 @@ class _MonthlyScreenState extends State<MonthlyScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-          child: TodoItem(
-        todo: todos[0],
+          child: TodoItemList(
+        todoList: todos,
       )),
     );
   }
